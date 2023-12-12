@@ -1,0 +1,6 @@
+# python 
+.venv
+__pycahce__
+
+# unnes. config's
+poetry.lock
