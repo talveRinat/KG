@@ -5,11 +5,10 @@ from rdflib import URIRef
 
 
 class GraphData:
-
     def __init__(self, name: object, iri: object):
         self.name = name
         self.iri = iri
-        self.uri_ref = URIRef(self.iri+self.name)
-    
+        self.uri_ref = URIRef(self.iri + self.name)
+
     def __call__(self):
         return self.uri_ref

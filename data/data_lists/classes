@@ -1,3 +1,4 @@
+StatisticsCls
 Cities
 Competitions
 LocalCompetitions
@@ -6,15 +7,10 @@ Countries
 Dates
 Person
 Players
-oaches
+Сoaches
+Play
 Positions
 Stadiums
-Statistics
-CoachStatistic
-CompetitionStatistic
-PlayerStatistic
-PlayStatistic
 Teams
-TeamStatistic
-SockerClubs
 NationalTeams
+SockerClubs

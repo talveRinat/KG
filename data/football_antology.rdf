@@ -57,7 +57,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/football/Competitions"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/football/Person"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/football/Teams"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/football/Statistics"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/football/StatisticsCls"/>
     </owl:ObjectProperty>
     
 
@@ -119,6 +119,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/football#PositionName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/football#PositionName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/football/Positions"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/football/BirthDate -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/football/BirthDate">
@@ -144,15 +152,6 @@
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/football/Names"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/football/Competitions"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/football/CompetitionStatistic -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/football/CompetitionStatistic">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/football/Statistics"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/football/CompetitionStatistic"/>
     </owl:DatatypeProperty>
     
 
@@ -216,16 +215,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/football/PersonStatistc -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/football/PersonStatistc">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/football/Statistics"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/football/CoachStatistic"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/football/PlayerStatistic"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.semanticweb.org/football/PositionName -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/football/PositionName">
@@ -248,7 +237,9 @@
 
     <!-- http://www.semanticweb.org/football/Statistics -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/football/Statistics"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/football/Statistics">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/football/StatisticsCls"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -258,15 +249,6 @@
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/football/Names"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/football/Teams"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/football/TeamStatistic -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/football/TeamStatistic">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/football/Statistics"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/football/TeamStatistic"/>
     </owl:DatatypeProperty>
     
 
@@ -294,22 +276,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/football/Cities">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/football/CoachStatistic -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/football/CoachStatistic">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/football/Statistics"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/football/CompetitionStatistic -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/football/CompetitionStatistic">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/football/Statistics"/>
     </owl:Class>
     
 
@@ -370,22 +336,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/football/PlayStatistic -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/football/PlayStatistic">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/football/Statistics"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/football/PlayerStatistic -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/football/PlayerStatistic">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/football/Statistics"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/football/Players -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/football/Players">
@@ -418,18 +368,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/football/Statistics -->
+    <!-- http://www.semanticweb.org/football/StatisticsCls -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/football/Statistics">
+    <owl:Class rdf:about="http://www.semanticweb.org/football/StatisticsCls">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/football/TeamStatistic -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/football/TeamStatistic">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/football/Statistics"/>
     </owl:Class>
     
 
@@ -486,7 +428,7 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/football/Person"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/football/Positions"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/football/Stadiums"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/football/Statistics"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/football/StatisticsCls"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/football/Teams"/>
         </owl:members>
     </rdf:Description>
@@ -500,7 +442,7 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/football/Person"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/football/Positions"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/football/Stadiums"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/football/Statistics"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/football/StatisticsCls"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/football/Teams"/>
         </owl:members>
     </rdf:Description>
