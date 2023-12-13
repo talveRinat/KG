@@ -21,3 +21,12 @@ class AddData:
         except(Exception) as e:
             print(e)
 
+    @abstractmethod
+    def add_competition(g: CustomGraph,
+                        competition_type: object,
+                        ):
+        """
+        Competition type in ["local", "national"]
+        """
+
+        assert competition_type in ["local", "national"]
