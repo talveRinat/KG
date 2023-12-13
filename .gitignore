@@ -1,6 +1,6 @@
 # python 
 .venv
-__pycahce__
+__pycache__
 
 # unnes. config's
 poetry.lock
