@@ -14,7 +14,7 @@ class Wrapper:
             for val in results["results"]["bindings"]:
                 wrapper_dict = {}
                 for var in vars_:
-                    wrapper_dict[var] = val[var]["value"]
+                    wrapper_dict[var] = val[var]["value"].replace(" ", "_")
                 yield wrapper_dict
 
         try:
