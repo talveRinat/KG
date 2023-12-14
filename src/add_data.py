@@ -24,7 +24,7 @@ class AddData:
             print(e)
 
     @abstractmethod
-    def add_dates(instance_name: object, start_date: object, end_date: object):
+    def add_dates(g: CustomGraph, instance_name: object, start_date: object, end_date: object):
         try:
             g.add_cls_instance(instance_name, "Dates")
             if start_date is not None:
@@ -45,7 +45,7 @@ class AddData:
             print(e)
 
     @abstractmethod
-    def add_statistic(instance_name: object, statistic: Optional[object]):
+    def add_statistic(g: CustomGraph, instance_name: object, statistic: Optional[object]):
         try:
             if statistic is not None:
                 g.add_cls_instance(instance_name + "_statistic", "StatisticsCls")
