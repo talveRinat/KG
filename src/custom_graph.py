@@ -18,7 +18,8 @@ class CustomGraph(Graph):
         """
         has the same args as graph.parse
         but has iri-arg that contains DB IRI-prefix
-        ex: http://www.semanticweb.org/football/smt (http://www.semanticweb.org/football - is IRI)
+        ex: http://www.semanticweb.org/football/smt \
+            (http://www.semanticweb.org/football - is IRI)
         """
         super().parse(*args, **kwargs)
         # TODO() assert re.match(iri)
@@ -43,7 +44,8 @@ class CustomGraph(Graph):
         return list(self.data_properties.keys())
 
     def add_cls_instance(self, instance_name: object, class_name: object):
-        assert class_name in self.classes.keys(), "class_name not in available classes"
+        assert class_name in self.classes.keys(), \
+            "class_name not in available classes"
 
         instance = URIRef(self.iri[:-1] + f"#{instance_name}")
         triplette = (instance, RDF.type, self.classes[class_name]())
