@@ -1,0 +1,8 @@
+# python 
+.venv
+__pycache__
+
+# unnes. config's
+poetry.lock
+
+.mypy_cache
